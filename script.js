@@ -5,7 +5,7 @@
     let rgb1 = "#000";
     let rgb2 = "#fff";
 
-
+    // Generate a Hexa Code
     const hexCode = () => {
         let myHexValues = "0123456789ABCDEF";
         let color = "#";
@@ -14,7 +14,7 @@
         }
         return color;
     };
-
+    // button1 : change innerHTML, CSS
     const handleButton1 = () => {
         rgb1 = hexCode();
         document.body.style.backgroundImage = 
@@ -23,7 +23,7 @@
         `background-image: linear-gradient(to right, ${rgb1}, ${rgb2})`;
         btn1.innerText = rgb1;
     };
-
+     // button2 : change innerHTML, CSS
     const handleButton2 = () => {
         rgb2 = hexCode();
         document.body.style.backgroundImage = 
@@ -35,6 +35,7 @@
 
     // btn1.addEventListener("click", handleButton1);
     // btn2.addEventListener("click", handleButton2);
+    // prevent default styling after copying to clipboard
     btn1.addEventListener("click", (e) => {
       e.preventDefault();
       handleButton1();
@@ -44,7 +45,7 @@
       handleButton2();
       });
 
-
+    // Copying HexaCode to clipboard and alert message
     copyDiv.addEventListener("click", () => {
         navigator.clipboard.writeText(copyDiv.innerText);
         alert("Copied to Clipboard");
