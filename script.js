@@ -2,8 +2,8 @@
     let btn1 = document.getElementById("myButton1");
     let btn2 = document.getElementById("myButton2");
     let copyDiv = document.querySelector('.copyCode');
-    let rgb1 = "#000";
-    let rgb2 = "#fff";
+    let rgb1 = "rgb(92,145,229)";
+    let rgb2 = "rgb(152,63,198)";
 
     // Generate a Hexa Code
     const hexCode = () => {
